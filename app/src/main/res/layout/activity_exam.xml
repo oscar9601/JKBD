@@ -137,4 +137,33 @@
         android:layout_height="wrap_content" android:layout_margin="18sp"
         android:text="D"/>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/exam_pre32x32"
+            android:text="上一题"
+            android:background="@null"
+            android:layout_alignParentLeft="true"
+            /><Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/exam_next32x32"
+        android:text="下一题"
+        android:background="@null"
+        android:layout_alignParentRight="true"
+        /><Button
+        android:layout_below="@id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/exam_commit32x32"
+        android:text="交卷"
+        android:background="@null"
+        android:layout_alignParentRight="true"
+        />
+    </RelativeLayout>
     </LinearLayout>
