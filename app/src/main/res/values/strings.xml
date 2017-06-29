@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JKBD</string>
+    <string name="app_name">驾考宝典</string>
     <string name="exam_title">"考试标题:C1"  subjectTitle +"\n"
                 "考试时间:10" limitTime "分钟\n"
                 "考题数量:100"  questionCount +</string>
