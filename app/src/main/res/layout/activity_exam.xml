@@ -7,7 +7,7 @@
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height=""></LinearLayout>
+        android:layout_height="wrap_content"></LinearLayout>
 <ImageView
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
@@ -73,7 +73,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="B."
-        android:layout_marginTop="12sp"
         android:textSize="18sp"
         android:textColor="#000"
         />
@@ -82,7 +81,6 @@
         android:layout_height="wrap_content"
         android:text="合流处"
         android:textSize="22sp"
-        android:layout_marginTop="12sp"
         android:textColor="#000"
         />
 </LinearLayout> <LinearLayout
@@ -92,7 +90,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="C."
-        android:layout_marginTop="12sp"
         android:textSize="18sp"
         android:textColor="#000"
         />
@@ -101,7 +98,6 @@
         android:layout_height="wrap_content"
         android:text="应急车道"
         android:textSize="22sp"
-        android:layout_marginTop="12sp"
         android:textColor="#000"
         />
 </LinearLayout> <LinearLayout
@@ -111,7 +107,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="D."
-        android:layout_marginTop="12sp"
         android:textSize="18sp"
         android:textColor="#000"
         />
@@ -120,8 +115,26 @@
         android:layout_height="wrap_content"
         android:text="向左变道"
         android:textSize="22sp"
-        android:layout_marginTop="12sp"
         android:textColor="#000"
         />
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+       >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_margin="18sp"
+            android:text="A"/> <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_margin="18sp"
+        android:text="B"/> <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_margin="18sp"
+        android:text="C"/> <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_margin="18sp"
+        android:text="D"/>
+    </LinearLayout>
     </LinearLayout>
