@@ -5,165 +5,193 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/main">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
-<ImageView
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:src="@mipmap/exam_title"
-    android:layout_gravity="center_horizontal"
-    android:layout_marginTop="20dp"/>
+    <ImageView
+        android:id="@+id/tv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/exam_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
     <TextView
+        android:id="@+id/tv_examinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="@string/exam_title"
         android:textColor="#000"
         android:layout_marginLeft="10dp"
         />
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#990000"
         android:layout_margin="5dp"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1."
-        android:textSize="18sp"
-        android:textColor="#000"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="这个标志是何含义？"
-        android:textSize="18sp"
-        android:textColor="#000"
-    />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            android:layout_gravity="center_horizontal"
-            />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="A."
-            android:layout_marginTop="12sp"
-            android:textSize="18sp"
-            android:textColor="#000"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="车道数变少"
-            android:textSize="22sp"
-            android:layout_marginTop="12sp"
-            android:textColor="#000"
-            />
-    </LinearLayout> <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="B."
-        android:textSize="18sp"
-        android:textColor="#000"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="合流处"
-        android:textSize="22sp"
-        android:textColor="#000"
-        />
-</LinearLayout> <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="C."
-        android:textSize="18sp"
-        android:textColor="#000"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="应急车道"
-        android:textSize="22sp"
-        android:textColor="#000"
-        />
-</LinearLayout> <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="D."
-        android:textSize="18sp"
-        android:textColor="#000"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="向左变道"
-        android:textSize="22sp"
-        android:textColor="#000"
-        />
-</LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-       >
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_exam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="这个标志是何含义?"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_exam_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@mipmap/exam_image"
+        android:layout_gravity="center_horizontal"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A."
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_op1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="车道数变少"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B."
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_op2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="合流处"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C."
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_op3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="应急车道"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D."
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tv_op4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="向左变道"
+            android:textColor="#000"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_margin="18sp"
-            android:text="A"/> <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_margin="18sp"
-        android:text="B"/> <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_margin="18sp"
-        android:text="C"/> <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_margin="18sp"
-        android:text="D"/>
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:layout_marginLeft="15dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:layout_marginLeft="15dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:layout_marginLeft="15dp"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D"
+            android:layout_marginLeft="15dp"/>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
         android:layout_height="wrap_content">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/exam_pre32x32"
-            android:text="上一题"
             android:background="@null"
-            android:layout_alignParentLeft="true"
-            /><Button
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/exam_next32x32"
-        android:text="下一题"
-        android:background="@null"
-        android:layout_alignParentRight="true"
-        /><Button
-        android:layout_below="@id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/exam_commit32x32"
-        android:text="交卷"
-        android:background="@null"
-        android:layout_alignParentRight="true"
-        />
+            android:text="上一题"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/exam_next32x32"
+            android:background="@null"
+            android:text="下一题"
+            android:layout_alignParentRight="true"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_next"
+            android:drawableLeft="@mipmap/exam_commit32x32"
+            android:background="@null"
+            android:text="交卷"
+            android:layout_alignParentRight="true"/>
     </RelativeLayout>
-    </LinearLayout>
+</LinearLayout>
