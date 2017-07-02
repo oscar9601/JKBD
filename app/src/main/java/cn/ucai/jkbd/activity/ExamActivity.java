@@ -36,6 +36,7 @@ public class ExamActivity extends AppCompatActivity {
     private void setLIstener() {
         registerReceiver(mLoadExamBroadcast,new IntentFilter(ExamApplication.LOAD_EXAM_INFO));
         registerReceiver(mLoadQuestiobnBroadcast,new IntentFilter(ExamApplication.LOAD_EXAM_QUESTION));
+        mImageView=(ImageView)findViewById(R.id.tv_image);
     }
 
     private void loadData() {
