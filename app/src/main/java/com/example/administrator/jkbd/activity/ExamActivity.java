@@ -162,7 +162,7 @@ public class ExamActivity extends AppCompatActivity {
             }else{
                 layoutLoading.setEnabled(true);
                 dialog.setVisibility(View.GONE);
-                tvLoad.setText("下载失败,点击重新下载");
+                tvLoad.setText("下载失败,点击重新下载。");
 
             }
         }
