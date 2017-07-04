@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +28,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 import java.util.zip.CheckedInputStream;
 
+import static android.R.attr.alertDialogIcon;
 import static android.R.attr.button;
 import static android.media.CamcorderProfile.get;
 import static java.lang.System.load;
@@ -245,7 +247,16 @@ public class ExamActivity extends AppCompatActivity {
         saveUserAnswer();
         showExam(biz.nextQuestion());
     }
-
+public void commit(View view){
+    saveUserAnswer();
+  int s=  biz.commitExam();;
+    AlertDialog.Builder buider = new AlertDialog.Builder(this);
+    buider.setIcon(R.mipmap.exam_commit32x32)
+            .setTitle("交卷")
+            .setMessage("你的分数为\n"+s+"分！")
+            .setPositiveButton("OK",null);
+    buider.create().show();
+}
 
     class LoadExamBroadcast extends BroadcastReceiver{
 
