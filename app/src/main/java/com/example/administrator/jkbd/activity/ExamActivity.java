@@ -25,6 +25,7 @@ import com.example.administrator.jkbd.biz.IExamBiz;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.zip.CheckedInputStream;
 
 import static android.R.attr.button;
 import static android.media.CamcorderProfile.get;
@@ -193,9 +194,14 @@ public class ExamActivity extends AppCompatActivity {
             }else{
                 mImageView.setVisibility(View.GONE);
             }
-
+        resetOptions();
         }
     }
+     private void resetOptions(){
+         for(CheckBox cb:cbs){
+             cb.setChecked(false);
+         }
+     }
 
     private void showData(item item) {
         tvExamInfo.setText(item.toString());
