@@ -178,7 +178,7 @@ public class ExamActivity extends AppCompatActivity {
 private void initTimer(item itemm){
     int sumTimer = itemm.getLimitTime()*60*1000;
     final long overTime=sumTimer+System.currentTimeMillis();
-    Timer timer = new Timer();
+    final Timer timer = new Timer();
     timer.schedule(new TimerTask() {
         @Override
         public void run() {
@@ -194,7 +194,18 @@ private void initTimer(item itemm){
 
         }
     },0,1000);
-
+    timer.schedule(new TimerTask() {
+        @Override
+        public void run() {
+            timer.cancel();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    commit(null);
+                }
+            });
+        }
+    },sumTimer);
 }
     private void showExam(Question question) {
         Log.e("showExam","showExam,exam="+question);
