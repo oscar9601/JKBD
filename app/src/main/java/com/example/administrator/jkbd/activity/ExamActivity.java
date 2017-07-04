@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -47,6 +48,7 @@ public class ExamActivity extends AppCompatActivity {
     LinearLayout layoutLoading,layout03,layout04;
     ImageView mImageView;
     ProgressBar dialog;
+    Gallery mGallery;
     IExamBiz biz;
     boolean isLoadExamInfo=false;
     boolean isLoadQuestions=false;
@@ -96,6 +98,8 @@ public class ExamActivity extends AppCompatActivity {
         tvExamInfo = (TextView) findViewById(R.id.tv_examinfo);
         tvExamTitle = (TextView) findViewById(R.id.tv_exam_title);
         tvNo= (TextView) findViewById(R.id.tv_exam_no);
+
+        mGallery=(Gallery) findViewById(R.id.gallery);
         tv0p1 = (TextView) findViewById(R.id.tv_op1);
         tv0p2 = (TextView) findViewById(R.id.tv_op2);
         tv0p3 = (TextView) findViewById(R.id.tv_op3);

@@ -46,6 +46,7 @@
             android:layout_gravity="center"
             android:drawableTop="@mipmap/main_menu_exit"
             android:text="退出"
+            android:onClick="exit"
             android:background="@null" />
     </LinearLayout>
 
