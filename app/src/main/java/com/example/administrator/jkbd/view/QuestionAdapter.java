@@ -4,6 +4,14 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.administrator.jkbd.ExamApplication;
+import com.example.administrator.jkbd.R;
+import com.example.administrator.jkbd.bean.Question;
+
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/7/5 0005.
@@ -11,9 +19,16 @@ import android.widget.BaseAdapter;
 
 public class QuestionAdapter extends BaseAdapter{
    Context mContext;
+    List<Question> examList;
+
+    public QuestionAdapter(Context mContext) {
+        this.mContext = mContext;
+        examList= ExamApplication.getInstance().getmQuestionList();
+    }
+
     @Override
     public int getCount() {
-        return 0;
+        return examList==null?0:examList.size();
     }
 
     @Override
@@ -28,6 +43,10 @@ public class QuestionAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        View view=View.inflate(mContext, R.layout.item_question,null );
+        TextView tvNo =(TextView)view.findViewById(R.id.tv_no);
+        ImageView ivQuestion = (ImageView) view.findViewById(R.id.iv_question);
+        tvNo.setText("第"+(position)+"题");
+        return view;
     }
 }
