@@ -56,6 +56,13 @@
         android:gravity="center_horizontal"
         android:layout_margin="10dp"
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -207,7 +214,8 @@
     <Gallery
         android:id="@+id/gallery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:spacing="10dp">
 
     </Gallery>
     <RelativeLayout
@@ -240,4 +248,6 @@
             android:onClick="commit"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
