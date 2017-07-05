@@ -11,6 +11,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Gallery;
@@ -25,6 +26,7 @@ import com.example.administrator.jkbd.bean.Question;
 import com.example.administrator.jkbd.bean.item;
 import com.example.administrator.jkbd.biz.ExamBiz;
 import com.example.administrator.jkbd.biz.IExamBiz;
+import com.example.administrator.jkbd.view.QuestionAdapter;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -50,6 +52,7 @@ public class ExamActivity extends AppCompatActivity {
     ProgressBar dialog;
     Gallery mGallery;
     IExamBiz biz;
+    QuestionAdapter mAdapter;
     boolean isLoadExamInfo=false;
     boolean isLoadQuestions=false;
 
@@ -166,7 +169,7 @@ public class ExamActivity extends AppCompatActivity {
                     showData(item);
                     initTimer(item);
                 }
-
+                initGallery();
 
                 showExam(biz.getExam());
 
@@ -179,7 +182,21 @@ public class ExamActivity extends AppCompatActivity {
         }
 
     }
-private void initTimer(item itemm){
+
+    private void initGallery() {
+        mAdapter=new QuestionAdapter(this);
+        mGallery.setAdapter(mAdapter);
+        mGallery.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            public void onItemClick(AdapterView<?>parent,View view,int position,long id){
+                saveUserAnswer();
+                showExam(biz.getExam(position));
+            }
+                                        }
+        );
+    }
+
+
+    private void initTimer(item itemm){
     int sumTimer = itemm.getLimitTime()*60*1000;
     final long overTime=sumTimer+System.currentTimeMillis();
     final Timer timer = new Timer();
