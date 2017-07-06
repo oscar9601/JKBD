@@ -258,9 +258,18 @@ public class ExamActivity extends AppCompatActivity {
             if(userAnswer!=null && !userAnswer.equals("")){
                 int userCB = Integer.parseInt(userAnswer)-1;
                 cbs[userCB].setChecked(true);
+                setOptions(true);
+        }else {
+                setOptions(false);
+            }
+    }
+    }
+    private void  setOptions(boolean hasAnswer){
+        for(CheckBox cb:cbs){
+            cb.setEnabled(!hasAnswer);
         }
     }
-    }
+
      private void resetOptions(){
          for(CheckBox cb:cbs){
              cb.setChecked(false);
@@ -268,10 +277,10 @@ public class ExamActivity extends AppCompatActivity {
      }
 
      private void saveUserAnswer(){
-
          for(int i=0;i<cbs.length;i++){
              if(cbs[i].isChecked()){
                  biz.getExam().setUserAnswer(String.valueOf(i+1));
+                 setOptions(true);
                  mAdapter.notifyDataSetChanged();
                  return;
              }
